@@ -1,0 +1,14 @@
+#products-main {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+.products-area {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }

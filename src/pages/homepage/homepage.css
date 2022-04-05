@@ -1,0 +1,140 @@
+#hero {
+  background-image: url("../../assets/homepage/homepage-banner.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  object-fit: contain;
+  height: calc(100vh - 6rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hero-texts {
+  margin: 0 5rem;
+  max-width: 50rem;
+  z-index: 1;
+}
+
+.hero-texts p {
+  margin: 2rem 0;
+}
+
+.btn {
+  margin-left: 0;
+}
+
+#categories {
+  margin: 10rem 5rem;
+}
+
+.categories-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 6rem auto 0 auto;
+}
+
+.category-card {
+  width: 30rem;
+  height: 15rem;
+  background: linear-gradient(
+    -150deg,
+    var(--site-primary-light),
+    var(--site-primary-bg)
+  );
+  border-radius: 11px;
+}
+
+.category-card {
+  padding: 7rem 0 0 2rem;
+}
+
+.category-card h5 {
+  color: var(--site-secondary);
+  font-weight: 500;
+}
+
+.btn-round {
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--site-secondary);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* deal day */
+
+.deal-day-products {
+  width: 100%;
+  height: 30rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  z-index: 1;
+}
+
+.nav-arrows {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 50%;
+  z-index: 3;
+}
+
+.nav-arrow {
+  width: 3rem;
+  height: 3rem;
+  color: #fff;
+  background-color: var(--site-secondary);
+  padding: 1rem;
+  border-radius: 50%;
+  /* box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.2); */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.products::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.products {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.products .product {
+  cursor: pointer;
+}
+
+.img-wrapper {
+  width: 15rem;
+  height: 15rem;
+}
+
+.img-wrapper {
+  box-shadow: none;
+}
+
+.bg-yellow {
+  padding: 0.3rem 0.8rem;
+  margin: 0.5rem;
+  background-color: var(--yellow);
+  color: var(--site-secondary);
+  border-radius: 30px;
+}

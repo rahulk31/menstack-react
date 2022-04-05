@@ -1,0 +1,46 @@
+#hero {
+    background-image: url("../../assets/homepage/homepage-banner.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    object-fit: contain;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-wrapper {
+    position: absolute;
+    left: 15%;
+    background-color: var(--white);
+    z-index: 5;
+    justify-content: start;
+    border: 1px dashed var(--site-secondary-light);
+  }
+  
+  .form-title {
+    margin-bottom: 2rem;
+  }
+  
+  .login-icons-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .login-icon {
+    width: 3rem;
+    height: 3rem;
+    color: var(--site-secondary);
+    margin: 1rem 1rem 1rem 0;
+    cursor: pointer;
+  }

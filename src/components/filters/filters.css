@@ -1,0 +1,70 @@
+.filters-area {
+  min-width: 30rem;
+  height: 100vh;
+  background-color: var(--site-secondary);
+  color: var(--white);
+  padding: 5rem 3rem;
+  border-right: 0.1px solid var(--site-secondary-light);
+}
+
+.filter-category,
+.filter-price,
+.filter-ratings,
+.filter-brands {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 0;
+}
+
+.filter-category select {
+  margin-top: 1rem;
+  width: 90%;
+  padding: 0.7rem 1rem;
+  font-family: inherit;
+  border-radius: 3rem;
+  font-size: 1.2rem;
+}
+
+.slider-container {
+  margin: 1rem 0 0;
+  padding: 0;
+  width: 100%;
+}
+
+.slider {
+  background-color: var(--site-primary-light);
+  min-width: 75%;
+}
+
+.sort-wrapper,
+.checkboxes-wrapper,
+.brands-wrapper {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.radio-wrapper,
+.checkbox-input,
+.brand-input {
+  font-size: 1.4rem;
+  margin-top: 5px;
+}
+
+.checkbox-input label,
+.brand-input label {
+  margin-left: 5px;
+}
+
+.bg {
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+.bg-yellow {
+  background-color: var(--secondary-yellow);
+  color: var(--site-secondary);
+}

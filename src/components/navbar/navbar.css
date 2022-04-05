@@ -1,0 +1,42 @@
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    box-shadow: 0 0 10px 5px var(--box-shadow-black05);
+    z-index: 1000;
+  }
+  
+  .navbar-left .h3 {
+    color: var(--site-secondary);
+  }
+  
+  .navbar-middle {
+    width: 30%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-middle .text-input {
+    padding: 1rem 2rem;
+    box-shadow: 0 0 5px 2px var(--box-shadow-black05);
+  }
+  
+  .navbar-icon {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-left: 1rem;
+    cursor: pointer;
+    color: var(--site-secondary);
+  }
+  
+  .navbar-icon:hover {
+    background-color: var(--site-primary-lighter);
+  }
+  
+  .icon-badge {
+    margin: 0;
+  }
+  

@@ -1,0 +1,32 @@
+.card-wrapper-v {
+  box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.09),
+    -1px -1px 1px 0 rgba(0,0,0,0.09);
+  margin: 2rem auto;
+}
+
+.img-container {
+  height: 300px;
+  object-fit: contain;
+}
+
+.wishlist {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.icon-wishlist {
+  width: 3rem;
+  height: 3rem;
+  color: var(--red);
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 10px var(--box-shadow-black05);
+  cursor: pointer;
+}
+
+.card-cta {
+  display: flex;
+  justify-content: center;
+}
+
