@@ -5,8 +5,8 @@ import "./wishlistCard.css";
 
 const WishlistCard = (props) => {
   const { title, seller, image, price, status, rating } = props.product;
-  const { dispatch } = useCart();
-  const { dispatchWishlist } = useWishlist();
+  const { addToCartHandler } = useCart();
+  const { removeFromWishlistHandler } = useWishlist();
   return (
     <div className="card-wrapper-v">
       <div className="img-container">
@@ -19,12 +19,7 @@ const WishlistCard = (props) => {
         </span>
         <IoHeart
           className="icon-wishlist wishlist"
-          onClick={() =>
-            dispatchWishlist({
-              type: "REMOVE_FROM_WISHLIST",
-              payload: props.product,
-            })
-          }
+          onClick={() => removeFromWishlistHandler(props.product)}
         />
         <img
           src={image}
@@ -58,23 +53,15 @@ const WishlistCard = (props) => {
         <div className="card-cta">
           <button
             className="btn btn-danger"
-            onClick={() =>
-              dispatchWishlist({
-                type: "REMOVE_FROM_WISHLIST",
-                payload: props.product,
-              })
-            }
+            onClick={() => removeFromWishlistHandler(props.product)}
           >
             Remove
           </button>
           <button
             className="btn-outline outline-primary"
             onClick={() => {
-              dispatch({ type: "ADD_TO_CART", payload: props.product });
-              dispatchWishlist({
-                type: "REMOVE_FROM_WISHLIST",
-                payload: props.product,
-              });
+              addToCartHandler(props.product);
+              removeFromWishlistHandler(props.product);
             }}
           >
             Add to Cart

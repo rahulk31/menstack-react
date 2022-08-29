@@ -153,7 +153,7 @@ const Filters = () => {
         </div>
 
         <span
-          class="span bg bg-yellow"
+          className="span bg bg-yellow"
           onClick={() => dispatchFilters({ type: "CLEAR_ALL_FILTERS" })}
         >
           clear filters

@@ -34,33 +34,33 @@ const Footer = () => {
               <IoLogoGithub className="footer-icon" />
             </div>
           </div>
-          <div className="footer-2">
-            <p className="p">Get to Know Us</p>
-            <p className="p-xs">About Us</p>
-            <p className="p-xs">Careers</p>
-            <p className="p-xs">Press Releases</p>
-            <p className="p-xs">Gift a Smile</p>
-            <p className="p-xs">Menstack Science</p>
-            <p className="p-xs">Menstack Cares</p>
-          </div>
-          <div className="footer-3">
-            <p className="p">Make Money with Us</p>
-            <p className="p-xs">Sell on Menstack</p>
-            <p className="p-xs">Sell under Stack Accelerator</p>
-            <p className="p-xs">Menstack Global Selling</p>
-            <p className="p-xs">Become an affiliate</p>
-            <p className="p-xs">Fullfilment by Menstack</p>
-            <p className="p-xs">Menstack Merchants</p>
-          </div>
-          <div className="footer-4">
-            <p className="p">Care & Support</p>
-            <p className="p-xs">Covid-19 Guidelines</p>
-            <p className="p-xs">Your Account</p>
-            <p className="p-xs">Returns Centre</p>
-            <p className="p-xs">100% Purchase Protection</p>
-            <p className="p-xs">Menstack App Download</p>
-            <p className="p-xs">Help</p>
-          </div>
+          <ul className="footer-2">
+            <li className="p">Get to Know Us</li>
+            <li className="p-xs">About Us</li>
+            <li className="p-xs">Careers</li>
+            <li className="p-xs">Press Releases</li>
+            <li className="p-xs">Gift a Smile</li>
+            <li className="p-xs">Menstack Science</li>
+            <li className="p-xs">Menstack Cares</li>
+          </ul>
+          <ul className="footer-3">
+            <li className="p">Make Money with Us</li>
+            <li className="p-xs">Sell on Menstack</li>
+            <li className="p-xs">Sell under Stack Accelerator</li>
+            <li className="p-xs">Menstack Global Selling</li>
+            <li className="p-xs">Become an affiliate</li>
+            <li className="p-xs">Fullfilment by Menstack</li>
+            <li className="p-xs">Menstack Merchants</li>
+          </ul>
+          <ul className="footer-4">
+            <li className="p">Care & Support</li>
+            <li className="p-xs">Covid-19 Guidelines</li>
+            <li className="p-xs">Your Account</li>
+            <li className="p-xs">Returns Centre</li>
+            <li className="p-xs">100% Purchase Protection</li>
+            <li className="p-xs">Menstack App Download</li>
+            <li className="p-xs">Help</li>
+          </ul>
         </div>
       </footer>
     </div>

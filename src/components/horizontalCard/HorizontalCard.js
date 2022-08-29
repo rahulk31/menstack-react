@@ -1,10 +1,10 @@
 import { useCart } from "../../contexts/cart-context";
-import {IoStarHalf} from "react-icons/io5"
+import { IoStarHalf } from "react-icons/io5";
 
 import "./horizontalCard.css";
 
 const HorizontalCard = (props) => {
-  const { dispatch } = useCart();
+  const { removeFromCartHandler, qtyHandler } = useCart();
   const { title, image, seller, price, quantity, rating } = props.product;
   return (
     <div className="card-wrapper-h">
@@ -22,8 +22,8 @@ const HorizontalCard = (props) => {
 
         <div className="price-and-rating">
           <div className="rating">
-          <p classNameName="card-text-tertiary">{rating}</p>
-            <IoStarHalf classNameName="card-icon" />
+            <p className="card-text-tertiary">{rating}</p>
+            <IoStarHalf className="card-icon" />
           </div>
           <div className="price">
             <span>₹</span>
@@ -42,17 +42,25 @@ const HorizontalCard = (props) => {
         <div className="card-cta">
           <button
             className="btn btn-danger"
-            onClick={() =>
-              dispatch({ type: "REMOVE_FROM_CART", payload: props.product })
-            }
+            onClick={() => removeFromCartHandler(props.product)}
           >
             Remove
           </button>
-          
-          <button className="btn btn-primary" onClick={() => dispatch({type: "DECREASE_QUANTITY", payload: props.product})}>-</button>
+
+          <button
+            className="btn btn-primary"
+            onClick={() => qtyHandler(props.product, "decrement")}
+          >
+            -
+          </button>
           <p className="btn-outline outline-primary">{quantity}</p>
 
-          <button className="btn btn-primary" onClick={() => dispatch({type: "INCREASE_QUANTITY", payload: props.product})}>+</button>
+          <button
+            className="btn btn-primary"
+            onClick={() => qtyHandler(props.product, "increment")}
+          >
+            +
+          </button>
         </div>
       </div>
     </div>

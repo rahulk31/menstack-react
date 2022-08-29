@@ -83,8 +83,8 @@ const Products = () => {
         <div className="products-area">
           {filterFunction().map((product) => {
             return (
-              <div>
-                <Product product={product} key={product._id} />
+              <div key={product._id} >
+                <Product product={product} />
               </div>
             );
           })}

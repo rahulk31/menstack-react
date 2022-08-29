@@ -1,5 +1,4 @@
 import { IoStarHalf, IoHeart, IoHeartOutline } from "react-icons/io5";
-import { useState } from "react";
 
 import "./product.css";
 
@@ -9,14 +8,15 @@ import { Link } from "react-router-dom";
 
 const Product = (props) => {
   const { title, price, image, seller, rating, status } = props.product;
-  const { cart, dispatch } = useCart();
-  const { wishlist, dispatchWishlist } = useWishlist();
+  const { cart, addToCartHandler } = useCart();
+  const { wishlist, addToWishlistHandler, removeFromWishlistHandler } =
+    useWishlist();
 
   const isInCart = (product) => {
     return cart.itemsInCart.some((item) => item._id === product._id);
   };
 
-  const isWishlisted = (product) => {
+  let isWishlisted = (product) => {
     return wishlist.itemsInWishlist.some((item) => item._id === product._id);
   };
 
@@ -35,22 +35,16 @@ const Product = (props) => {
             <IoHeart
               className="icon-wishlist wishlist"
               onClick={() => {
-                dispatchWishlist({
-                  type: "REMOVE_FROM_WISHLIST",
-                  payload: props.product,
-                });
-                setIsWishlisted(!isWishlisted);
+                removeFromWishlistHandler(props.product);
+                isWishlisted = !isWishlisted;
               }}
             />
           ) : (
             <IoHeartOutline
               className="icon-wishlist wishlist"
               onClick={() => {
-                dispatchWishlist({
-                  type: "ADD_TO_WISHLIST",
-                  payload: props.product,
-                });
-                setIsWishlisted(!isWishlisted);
+                addToWishlistHandler(props.product);
+                isWishlisted = !isWishlisted;
               }}
             />
           )}
@@ -92,9 +86,7 @@ const Product = (props) => {
               <>
                 <button
                   className="btn-outline outline-primary"
-                  onClick={() =>
-                    dispatch({ type: "ADD_TO_CART", payload: props.product })
-                  }
+                  onClick={() => addToCartHandler(props.product)}
                 >
                   Add to cart
                 </button>
